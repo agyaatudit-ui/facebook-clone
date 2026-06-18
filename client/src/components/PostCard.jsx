@@ -46,7 +46,7 @@ export default function PostCard({ post, onDelete }) {
     <div className="post-card card">
       <div className="post-header">
         <Link to={`/profile/${post.user?._id}`} className="post-user">
-          <img src={post.user?.avatar ? `http://localhost:5000${post.user.avatar}` : 'https://via.placeholder.com/40'} alt="" className="avatar" />
+          <img src={post.user?.avatar ? `https://facebook-clone-api-52k8.onrender.com${post.user.avatar}` : 'https://via.placeholder.com/40'} alt="" className="avatar" />
           <div>
             <strong>{post.user?.firstName} {post.user?.lastName}</strong>
             <span className="post-time">{timeAgo(post.createdAt)}</span>
@@ -60,7 +60,7 @@ export default function PostCard({ post, onDelete }) {
         )}
       </div>
       {post.text && <div className="post-text">{post.text}</div>}
-      {post.image && <img src={`http://localhost:5000${post.image}`} alt="" className="post-image" />}
+      {post.image && <img src={`https://facebook-clone-api-52k8.onrender.com${post.image}`} alt="" className="post-image" />}
       <div className="post-stats">
         {likes.length > 0 && <span>{likes.length} Likes</span>}
         {comments.length > 0 && <span onClick={() => setShowComments(!showComments)}>{comments.length} Comments</span>}
@@ -79,7 +79,7 @@ export default function PostCard({ post, onDelete }) {
         <div className="comments-section">
           {comments.map((c) => (
             <div key={c._id} className="comment">
-              <img src={c.user?.avatar ? `http://localhost:5000${c.user.avatar}` : 'https://via.placeholder.com/32'} alt="" />
+              <img src={c.user?.avatar ? `https://facebook-clone-api-52k8.onrender.com${c.user.avatar}` : 'https://via.placeholder.com/32'} alt="" />
               <div className="comment-body">
                 <strong>{c.user?.firstName} {c.user?.lastName}</strong>
                 <p>{c.text}</p>

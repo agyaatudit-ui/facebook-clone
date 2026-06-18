@@ -91,13 +91,13 @@ export default function Profile() {
   return (
     <div className="profile-page">
       <div className="profile-cover">
-        <img src={profile.coverPhoto ? `http://localhost:5000${profile.coverPhoto}` : 'https://via.placeholder.com/1200x350/1877f2/ffffff?text=Cover'} alt="" />
+        <img src={profile.coverPhoto ? `https://facebook-clone-api-52k8.onrender.com${profile.coverPhoto}` : 'https://via.placeholder.com/1200x350/1877f2/ffffff?text=Cover'} alt="" />
         {isOwner && <label className="cover-upload"><input type="file" accept="image/*" onChange={handleCoverUpload} hidden />Change Cover</label>}
       </div>
       <div className="profile-info">
         <div className="profile-avatar-section">
           <div className="profile-avatar-wrap">
-            <img src={profile.avatar ? `http://localhost:5000${profile.avatar}` : 'https://via.placeholder.com/168'} alt="" className="profile-avatar" />
+            <img src={profile.avatar ? `https://facebook-clone-api-52k8.onrender.com${profile.avatar}` : 'https://via.placeholder.com/168'} alt="" className="profile-avatar" />
             {isOwner && <label className="avatar-upload"><input type="file" accept="image/*" onChange={handleAvatarUpload} hidden /></label>}
           </div>
           <div className="profile-details">
@@ -133,7 +133,7 @@ export default function Profile() {
           <div className="friends-grid">
             {profile.friends?.slice(0, 9).map((f) => (
               <Link key={f._id} to={`/profile/${f._id}`} className="friend-card">
-                <img src={f.avatar ? `http://localhost:5000${f.avatar}` : 'https://via.placeholder.com/100'} alt="" />
+                <img src={f.avatar ? `https://facebook-clone-api-52k8.onrender.com${f.avatar}` : 'https://via.placeholder.com/100'} alt="" />
                 <span>{f.firstName} {f.lastName}</span>
               </Link>
             ))}

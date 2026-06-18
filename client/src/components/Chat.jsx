@@ -105,7 +105,7 @@ export default function Chat() {
                 return (
                   <div key={c._id} className="chat-item" onClick={() => openConversation(c)}>
                     <div className="chat-avatar-wrap">
-                      <img src={other?.avatar ? `http://localhost:5000${other.avatar}` : 'https://via.placeholder.com/40'} alt="" />
+                      <img src={other?.avatar ? `https://facebook-clone-api-52k8.onrender.com${other.avatar}` : 'https://via.placeholder.com/40'} alt="" />
                       {onlineUsers.includes(other?._id) && <span className="online-dot"></span>}
                     </div>
                     <div className="chat-item-info">

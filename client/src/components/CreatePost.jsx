@@ -39,7 +39,7 @@ export default function CreatePost({ onPostCreated }) {
   return (
     <div className="create-post card">
       <div className="create-post-top">
-        <img src={user?.avatar ? `http://localhost:5000${user.avatar}` : 'https://via.placeholder.com/40'} alt="" className="avatar" />
+        <img src={user?.avatar ? `https://facebook-clone-api-52k8.onrender.com${user.avatar}` : 'https://via.placeholder.com/40'} alt="" className="avatar" />
         <form onSubmit={handleSubmit} className="create-post-form">
           <textarea placeholder={`What's on your mind, ${user?.firstName}?`}
             value={text} onChange={(e) => setText(e.target.value)}

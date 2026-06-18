@@ -13,7 +13,7 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     if (user) {
-      const newSocket = io('http://localhost:5000');
+      const newSocket = io('https://facebook-clone-api-52k8.onrender.com');
       newSocket.on('connect', () => {
         newSocket.emit('setup', user._id);
       });

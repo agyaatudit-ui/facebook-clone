@@ -24,7 +24,7 @@ export default function FriendSuggestions() {
       {suggestions.map((u) => (
         <div key={u._id} className="suggestion-item">
           <Link to={`/profile/${u._id}`} className="suggestion-user">
-            <img src={u.avatar ? `http://localhost:5000${u.avatar}` : 'https://via.placeholder.com/36'} alt="" />
+            <img src={u.avatar ? `https://facebook-clone-api-52k8.onrender.com${u.avatar}` : 'https://via.placeholder.com/36'} alt="" />
             <span>{u.firstName} {u.lastName}</span>
           </Link>
           <button onClick={() => sendRequest(u._id)} className="btn-add-friend">+</button>

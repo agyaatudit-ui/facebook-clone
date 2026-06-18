@@ -71,7 +71,7 @@ export default function Navbar() {
               {results.map((u) => (
                 <Link key={u._id} to={`/profile/${u._id}`} className="search-item"
                   onMouseDown={() => navigate(`/profile/${u._id}`)}>
-                  <img src={u.avatar ? `http://localhost:5000${u.avatar}` : 'https://via.placeholder.com/40'} alt="" />
+                  <img src={u.avatar ? `https://facebook-clone-api-52k8.onrender.com${u.avatar}` : 'https://via.placeholder.com/40'} alt="" />
                   <span>{u.firstName} {u.lastName}</span>
                 </Link>
               ))}
@@ -97,7 +97,7 @@ export default function Navbar() {
               {notifications.length === 0 && <p className="empty-text">No notifications</p>}
               {notifications.map((n) => (
                 <div key={n._id} className={`notif-item ${!n.read ? 'unread' : ''}`}>
-                  <img src={n.from?.avatar ? `http://localhost:5000${n.from.avatar}` : 'https://via.placeholder.com/36'} alt="" />
+                  <img src={n.from?.avatar ? `https://facebook-clone-api-52k8.onrender.com${n.from.avatar}` : 'https://via.placeholder.com/36'} alt="" />
                   <span>{notifText(n)}</span>
                 </div>
               ))}
@@ -105,7 +105,7 @@ export default function Navbar() {
           )}
         </div>
         <div className="profile-trigger" onClick={() => setShowProfile(!showProfile)}>
-          <img src={user?.avatar ? `http://localhost:5000${user.avatar}` : 'https://via.placeholder.com/32'} alt="" className="nav-avatar" />
+          <img src={user?.avatar ? `https://facebook-clone-api-52k8.onrender.com${user.avatar}` : 'https://via.placeholder.com/32'} alt="" className="nav-avatar" />
           <span>{user?.firstName}</span>
           {showProfile && (
             <div className="dropdown profile-dropdown">

@@ -64,7 +64,7 @@ export default function Friends() {
         {users.map((u) => (
           <div key={u._id} className="friend-card-large">
             <Link to={`/profile/${u._id}`}>
-              <img src={u.avatar ? `http://localhost:5000${u.avatar}` : 'https://via.placeholder.com/150'} alt="" />
+              <img src={u.avatar ? `https://facebook-clone-api-52k8.onrender.com${u.avatar}` : 'https://via.placeholder.com/150'} alt="" />
               <h4>{u.firstName} {u.lastName}</h4>
             </Link>
             {tab === 'suggestions' && (
