@@ -61,9 +61,9 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/" className="navbar-logo">facebook</Link>
+        <Link to="/" className="navbar-logo">FriendsBook</Link>
         <div className="search-box">
-          <input type="text" placeholder="Search Facebook" value={search}
+          <input type="text" placeholder="Search FriendsBook" value={search}
             onChange={handleSearch} onFocus={() => setShowSearch(true)}
             onBlur={() => setTimeout(() => setShowSearch(false), 200)} />
           {showSearch && results.length > 0 && (

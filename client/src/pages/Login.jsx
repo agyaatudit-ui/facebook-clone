@@ -23,8 +23,8 @@ export default function Login() {
     <div className="auth-page">
       <div className="auth-container">
         <div className="auth-left">
-          <h1 className="auth-logo">facebook</h1>
-          <p className="auth-tagline">Connect with friends and the world around you on Facebook.</p>
+          <h1 className="auth-logo">FriendsBook</h1>
+          <p className="auth-tagline">Connect with friends and the world around you on FriendsBook.</p>
         </div>
         <div className="auth-right">
           <form className="auth-form" onSubmit={handleSubmit}>
